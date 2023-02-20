@@ -8,6 +8,7 @@
     "@mui/icons-material": "^5.6.1",
     "@mui/material": "^5.6.1",
     "@redux-devtools/extension": "^3.2.2",
+    "@reduxjs/toolkit": "^1.9.2",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^14.1.1",
@@ -48,7 +49,6 @@
   },
   "description": "## `Kurulum`",
   "main": "index.js",
-  "devDependencies": {},
   "author": "",
   "license": "ISC"
 }

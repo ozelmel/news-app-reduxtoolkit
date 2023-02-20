@@ -23,7 +23,7 @@ const Login = () => {
   const handleGoogleSingIn = () => {
     loginWithGoogle();
   };
-
+// TODO email, password => user state -- setEmail(""), setPassword("")
   const handleLogin = () => {
     login(email, password)
       .then(() => {
