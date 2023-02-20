@@ -16,12 +16,12 @@ import { setUser } from "../features/authSlice";
 
 const Login = () => {
   const navigate = useNavigate();
-  const currentUser = true;
+  // const currentUser = true;
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const dispatch = useDispatch
+  const dispatch = useDispatch();
 
-  console.log(currentUser);
+  // console.log(currentUser);
 
   const handleGoogleSingIn = () => {
     loginWithGoogle();

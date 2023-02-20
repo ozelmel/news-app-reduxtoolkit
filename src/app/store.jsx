@@ -7,6 +7,8 @@ const store = configureStore({
         auth:authReducer,
         news:newsReducer,
     }
+    //devtools:false,
+    //devtools:process.env.NODE_ENV !== "production",
 })
 
 
