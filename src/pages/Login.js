@@ -11,22 +11,26 @@ import {
 
 import { login, loginWithGoogle } from "../utils/firebaseUtil";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setUser } from "../features/authSlice";
 
 const Login = () => {
   const navigate = useNavigate();
   const currentUser = true;
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const dispatch = useDispatch
 
   console.log(currentUser);
 
   const handleGoogleSingIn = () => {
     loginWithGoogle();
   };
-// TODO email, password => user state -- setEmail(""), setPassword("")
+
   const handleLogin = () => {
     login(email, password)
       .then(() => {
+        dispatch(setUser({email, password}))
         navigate("/");
       })
       .catch((error) => {

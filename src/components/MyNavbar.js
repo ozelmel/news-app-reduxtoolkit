@@ -11,10 +11,13 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
+import { useSelector } from "react-redux";
 
 const MyNavbar = () => {
   const navigate = useNavigate();
-  const currentUser = false;
+  // const currentUser = false;
+  const currentUser = useSelector(state => state.auth.user);
+  
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
